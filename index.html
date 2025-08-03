@@ -94,6 +94,56 @@
 </section>
 
 <section>
+    <h2>Video yêu thích</h2>
+    <input type="text" id="youtubeLink" placeholder="Dán link YouTube tại đây" style="width:70%">
+    <button onclick="addVideo()">Thêm video</button>
+    <div id="videoList" style="margin-top:20px;"></div>
+</section>
+
+<script>
+    // Lấy danh sách video từ localStorage
+    let videos = JSON.parse(localStorage.getItem("videos")) || [];
+
+    function renderVideos() {
+        let html = "";
+        videos.forEach((link, index) => {
+            let videoId = link.split("v=")[1];
+            if(videoId && videoId.includes("&")) {
+                videoId = videoId.split("&")[0];
+            }
+            html += `
+                <div style="margin-bottom:20px;">
+                    <iframe width="300" height="170" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                    <br>
+                    <button onclick="deleteVideo(${index})">Xóa</button>
+                </div>
+            `;
+        });
+        document.getElementById("videoList").innerHTML = html;
+    }
+
+    function addVideo() {
+        let link = document.getElementById("youtubeLink").value.trim();
+        if (link) {
+            videos.push(link);
+            localStorage.setItem("videos", JSON.stringify(videos));
+            document.getElementById("youtubeLink").value = "";
+            renderVideos();
+        }
+    }
+
+    function deleteVideo(index) {
+        videos.splice(index, 1);
+        localStorage.setItem("videos", JSON.stringify(videos));
+        renderVideos();
+    }
+
+    // Hiển thị khi load trang
+    renderVideos();
+</script>
+
+
+<section>
     <h2>Liên hệ</h2>
     <p>Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
 </section>
