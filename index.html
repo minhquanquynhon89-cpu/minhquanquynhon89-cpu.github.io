@@ -1,16 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Trang cá nhân của Quân</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân - Quân</title>
     <style>
-        body { font-family: Arial; text-align: center; background: #f4f4f4; }
-        h1 { color: #333; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #0078d7;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+        header h1 {
+            margin: 15px 0 5px;
+            font-size: 28px;
+        }
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        section {
+            padding: 30px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h2 {
+            color: #0078d7;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <h1>Xin chào, mình là Quân 👋</h1>
-    <p>Đây là trang web cá nhân của mình.</p>
-    <p>Email: yourname@gmail.com</p>
+
+<header>
+    <img src="https://via.placeholder.com/120" alt="Avatar">
+    <h1>Nguyễn Minh Quân 👋</h1>
+    <p>Web Developer | Yêu thích công nghệ</p>
+</header>
+
+<section>
+    <h2>Giới thiệu</h2>
+    <p>Xin chào! Mình là Quân, một lập trình viên yêu thích xây dựng các ứng dụng web và học hỏi công nghệ mới.</p>
+</section>
+
+<section>
+    <h2>Kỹ năng</h2>
+    <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, Django</li>
+        <li>Git & GitHub</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Dự án</h2>
+    <ul>
+        <li><a href="#">Website cá nhân</a></li>
+        <li><a href="#">Ứng dụng quản lý công việc</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Liên hệ</h2>
+    <p>Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
+</section>
+
+<footer>
+    © 2025 Nguyễn Minh Quân. All rights reserved.
+</footer>
+
 </body>
 </html>
